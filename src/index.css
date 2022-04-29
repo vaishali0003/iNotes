@@ -1,0 +1,979 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  transition: all 0.25s linear;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ececf7;
+}
+
+.nav-item {
+  font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+  color: #e328d8 !important;
+}
+
+.logoHeading{
+  display: flex;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.disc1{
+  height: 23px;
+  width: 23px;
+  border: 4px solid black;
+  border-radius: 50%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 7px;
+}
+
+.disc2{
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.black{
+color: black;
+}
+.blue{
+  color: #0d6efd;
+}
+
+/* home1 section css */
+.homePg {
+  padding: 3rem 2rem;
+  /* border: 2px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homePg1 {
+  width: 80%;
+  display: flex;
+}
+
+.homeBg {
+  width: 26rem;
+}
+
+.homeBg img {
+  height: 100%;
+  width: 100%;
+}
+
+.homeBgleft {
+  display: flex;
+  align-items: center;
+  width: 65%;
+}
+
+.homeBgright {
+  width: 35%;
+}
+
+.homeBtn {
+  padding: 0.375rem 1.95rem;
+  border-radius: 1.2rem;
+  font-size: 15px;
+  color: #0d6efd !important;
+  border: 2px solid #0d6efd !important;
+  transition: 0.5s;
+}
+
+.homeBtn:hover {
+  color: white !important;
+  background-color: #0d6efd !important;
+}
+
+#homeLogin {
+  margin-left: 0.6rem;
+}
+
+
+.homePgTxt3 {
+  font-size: 17px;
+  margin-bottom: 1.5rem;
+}
+
+.animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Home section Css */
+
+.notesBg{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.notesBgImg{
+  opacity: 0.9;
+    width: 11rem;
+}
+
+.notesBgImg img{
+  width: 100%;
+  height: 100%;
+}
+
+.notesBgTxt{
+  margin: 0.5rem;
+  font-weight: 500;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.notesSection {
+  padding: 1.5rem 3rem;
+}
+
+.notesSection1 {
+  display: flex;
+  justify-content: center;
+}
+
+.inputBox1 {
+  width: 36rem;
+  /* display: none; */
+}
+
+.inputBox1 input {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgb(200 208 214 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.inputBox2 {
+  width: 36rem;
+  border-radius: 6px;
+  padding: 0.2rem 0;
+  background-color: #f8f9fa;
+  box-shadow: 0 1px 2px 0 rgb(200 208 214 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+  display: none;
+  position: relative;
+}
+
+.inputBox2 input,
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.8rem;
+}
+
+.closebutton {
+  position: absolute;
+  right: -18px;
+  bottom: 1px;
+}
+
+.closebtn {
+  position: absolute;
+  right: 25px;
+  font-size: 15px;
+  bottom: 12px;
+  border: none;
+  opacity: 0.8;
+  background: none;
+  border-radius: 4px;
+  padding: 4px 17px;
+  color: black;
+}
+
+.closebtn:hover {
+  cursor: pointer;
+  background-color: #270a0a12;
+}
+
+
+.notesSection2 {
+  margin-top: 1.5rem;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 18rem;
+  min-height: 6rem;
+  border-radius: 16px;
+  margin: 10px;
+  border-color: #e0e0e0;
+  border: 1px solid transparent;
+  display: block;
+  cursor: pointer;
+  border-radius: 16px;
+  position: relative;
+}
+
+.tick {
+  width: 24px;
+  position: absolute;
+  left: -4px;
+  top: -5px;
+  display: none;
+}
+
+.card:hover {
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.card:hover .tick {
+  display: block;
+}
+
+.editingIcons {
+  justify-content: flex-end;
+  display: none;
+  position: absolute;
+  right: 19px;
+  bottom: 3px;
+}
+
+.editingIcon {
+  width: 12px;
+  margin: 2px 8px;
+  padding: 6px 0px;
+}
+
+.card:hover .editingIcons {
+  display: flex;
+}
+
+
+/* sign up page css */
+.signUpElem {
+  display: flex;
+  justify-content: center;
+}
+
+.signUpBox {
+  /* border: 2px solid black; */
+  display: flex;
+  margin-top: 1.8rem;
+  background-color: #f8f9fa;
+  width: 60%;
+  padding: 1.9rem 4.2rem;
+  border-radius: 6px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+}
+
+.Sheading {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.signUpIcon {
+  width: 13px;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 2px 10px;
+}
+
+.fIn {
+  background-color: #f8f9fa;
+}
+
+.form-group {
+  border-bottom: 2px solid grey;
+  margin: 29px 0px;
+  display: flex;
+}
+
+.rBtn {
+  font-size: 14px;
+  /* margin: 10px 0px; */
+  margin-top: 1rem !important;
+  background-color: #3475d5 !important;
+  border-color: #3475d5 !important;
+  padding: 0.6rem 1.4rem !important;
+  border-radius: 0.15rem !important;
+}
+
+.signUpBox1 {
+  width: 45%;
+}
+
+.signUpBox2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100%; */
+  width: 55%;
+}
+
+.img {
+  width: 24rem;
+}
+
+.img img {
+  height: 100%;
+  width: 100%;
+}
+.txt{
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}
+.lg1 {
+  cursor: pointer;
+}
+
+.lg1:hover {
+  text-decoration: underline;
+}
+
+/* login page css */
+
+.loginBox {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  padding: 3rem 4rem;
+}
+
+.loginBox1 {
+  width: 55%;
+}
+
+.loginBox2 {
+  margin-top: 2.2rem;
+  width: 45%;
+}
+
+.loginBox1 .img {
+  width: 19rem;
+}
+
+/* Contact us page css */
+
+.contactMain1 {
+  padding: 1.5rem 0;
+}
+
+.cBoxMain {
+  display: flex;
+  justify-content: center;
+}
+
+.cBox {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  padding: 20px 18px;
+  background-color: #f8f9fa;
+  border-radius: 7px;
+}
+
+.cIcon {
+  width: 17px;
+}
+
+.cInfo {
+  margin: 0px 15px;
+}
+
+.cInfo1 {
+  margin-bottom: 0.2px !important;
+}
+
+.cInfo2 {
+  margin-bottom: 0px !important;
+  font-size: 15px;
+}
+
+.contactMain2 {
+  /* border: 2px solid ; */
+  margin-top: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.cHeading {
+  padding-top: 35px;
+}
+
+.cInput {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 9%), 0 6px 1px 0 rgb(0 0 0 / 0%);
+}
+
+.sendMsgBtn {
+  padding: 0.5rem 1.4rem !important;
+  cursor: pointer;
+}
+
+
+.errorPage {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.errorPageBg h1 {
+  font-size: 14pc;
+  opacity: 0.1;
+}
+
+.errorPageTxt {
+  position: absolute;
+  text-align: center;
+}
+
+.backToHomeBtn {
+  padding: 0.375rem 1.75rem;
+  border-radius: 1.2rem;
+  font-size: 15px;
+}
+
+
+/* About page css */
+.aboutElem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 3.5rem 1.5rem; */
+}
+
+.aboutBox {
+  width: 65%;
+  margin-top: 2rem;
+  /* border: 2px solid black; */
+  padding: 2.5rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.aboutBox1 {
+  display: flex;
+  align-items: center;
+}
+
+.aboutBox2 {
+  width: 80%;
+}
+
+.aboutImg {
+  width: 21.5rem;
+  height: 100%;
+}
+
+.aboutTxt {
+  font-size: 17px;
+}
+
+.abouInfo1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoList {
+  padding-left: 0 !important;
+}
+
+.infoListName {
+  list-style: none;
+}
+
+.infoListName1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+#userInfo1 {
+  width: 40%;
+  font-weight: 500;
+}
+
+#userInfo2 {
+  width: 60%;
+  text-align: left;
+  margin-left: 9px;
+  font-weight: 500;
+  color: #407bff;
+}
+
+/* css for responsive */
+@media only screen and (max-width: 1225px) {
+  .homeBg {
+    width: 24rem;
+  }
+
+  .homePg1 {
+    width: 84%;
+  }
+
+  .aboutBox {
+    width: 70%;
+    margin-top: 1rem;
+  }
+
+  .loginBox1 .img {
+    width: 17rem;
+  }
+
+  .loginBox {
+    padding: 3rem 3.2rem;
+  }
+  .signUpBox2 .img{
+    width: 22.5rem;
+  }
+}
+
+@media only screen and (max-width: 1058px) {
+  .homeBg {
+    width: 21rem;
+  }
+
+  .homeBg {
+    width: 19rem;
+  }
+
+  .homePg1 {
+    width: 90%;
+  }
+
+  .aboutBox {
+    padding: 2rem;
+  }
+
+  .aboutImg {
+    width: 20rem;
+  }
+
+  .aboutBox {
+    width: 80%;
+  }
+
+  .infoListName {
+    font-size: 15px;
+  }
+
+  .signUpBoxAlt{
+    padding: 1.4rem 4rem;
+    margin-top: -0.2rem;
+    width: 70%;
+  }
+
+  .loginBox {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 918px) {
+  .aboutBox {
+    width: 85%;
+  }
+
+  .loginBox {
+    width: 80%;
+  }
+  .signUpBoxAlt{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 822px) {
+  .homePg {
+    padding: 2rem 2rem;
+  }
+
+  .homeBg {
+    width: 18rem;
+  }
+
+  .homePgTxt1 {
+    font-size: 1.7rem;
+  }
+
+  .homePgTxt2 {
+    font-size: 1.45rem;
+  }
+
+  .homePgTxt3 {
+    font-size: 16px;
+  }
+
+  .homeBgleft {
+    width: 60%;
+  }
+
+  .homeBgright {
+    width: 40%;
+  }
+
+  .aboutBox {
+    width: 92%;
+  }
+
+  .loginBox1 .img {
+    width: 16rem;
+  }
+
+  .loginBox {
+    width: 82%;
+  }
+  .signUpBoxAlt{
+    width: 82%;
+    padding: 1.4rem 3rem;
+  }
+  .signUpBox2 .img {
+    width: 20.5rem;
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .homePg {
+    padding: 0;
+  }
+
+  .homePg1 {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .homePgTxt {
+    text-align: center;
+  }
+
+  .homeBgleft {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .homeBgright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .homeBg {
+    width: 19rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .aboutBox {
+    width: 70%;
+    margin-top: -0.5rem;
+    padding: 0.8rem;
+  }
+
+  .aboutImg {
+    width: 18rem;
+  }
+
+  .abouInfo1 {
+    text-align: center;
+  }
+
+  .contactMain1 {
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .contactMain2 {
+    padding: 0 2rem;
+  }
+
+  .Sheading {
+    font-size: 23px;
+    margin-top: 7px;
+  }
+
+  .loginBox {
+    flex-direction: column;
+    padding: 1rem 3.2rem;
+    margin-top: 0.3rem;
+  }
+  .loginBox1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+  .loginBox2 {
+    margin-top: 1.2rem;
+    width: 80%;
+}
+.Sheading{
+  text-align: center;
+}
+.signUpBoxAlt{
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.signUpBox2{
+  width: 100%;
+}
+.signUpBox1 {
+  width: 80%;
+}
+.signUpBox2 .img{
+  width: 21.5rem;
+}
+.cBox{
+  margin: 0.5rem 0;
+}
+}
+
+
+@media only screen and (max-width: 661px) {
+
+  .h4,
+  h4 {
+    font-size: calc(1.2rem + .3vw);
+  }
+
+  .infoListName {
+    font-size: 14px;
+  }
+
+  .aboutBox {
+    width: 80%;
+    padding: 0.8rem 0.3rem;
+  }
+ 
+  .errorPageBg h1 {
+    font-size: 12pc;
+}
+.notesSection {
+  padding: 0.5rem 3rem;
+}
+.notesBgImg {
+  opacity: 0.9;
+  width: 9rem;
+}
+}
+
+@media only screen and (max-width: 474px) {
+  .aboutBox {
+    width: 90%;
+  }
+
+  .aboutBox2 {
+    width: 100%;
+  }
+
+  #userInfo1 {
+    width: 30%;
+  }
+
+  #userInfo2 {
+    width: 70%;
+  }
+  .loginBox1 .img {
+    width: 14rem;
+}
+.Sheading {
+  font-size: 22px;
+}
+.fIn{
+  font-size: 15px;
+}
+.txt{
+  width: 100%;
+  text-align: center;
+}
+.errorPage{
+  min-height: 50vh;
+}
+.errorPageBg h1 {
+  font-size: 9pc;
+}
+}
+
+@media only screen and (max-width: 400px) {
+  .logoHeading {
+    font-size: 1.6rem;
+  }
+  .infoListName {
+    font-size: 13px;
+  }
+  .loginBox2 {
+    width: 92%;
+}
+.signUpBox1{
+  width: 92%;
+}
+.notesBgImg {
+  width: 8rem;
+}
+.notesBgTxt{
+  font-size: 1.2rem;
+}
+}
+
+.toggleBtn{
+  border: none;
+  outline: none;
+  background: none;
+  font-weight: 500;
+}
+
+
+
+/* DARK MODE CSS */
+.navbarDark{
+  background-color: #18184a !important;
+}
+
+.discDark{
+  filter: invert(1);
+}
+.white{
+  color: white;
+}
+.mainDark{
+  background-color: #0a0a33;
+}
+
+.navLinkDark{
+  color: white !important;
+}
+
+.homePgTxt1Dark{
+  color: white !important;
+}
+
+.signUpBoxDark{
+  background-color: #18184a !important;
+}
+.fInDark{
+  background-color: #18184a !important;
+  color: white;
+} 
+.signUpIconDark{
+  filter: invert(1);
+}
+.cBoxDark{
+  background-color: #18184a;
+  color: white;
+}
+.cIconDark{
+  filter: invert(1);
+}
+.contactMain2Dark,.contactMain21Dark{
+  background-color: #18184a;
+  color: white;
+}
+
+.contactMain21Dark input{
+  background-color: #18184a;
+}
+.cInputDark{
+  background-color: #18184a;
+  color: white;
+  border: 1px solid #1b255d;
+}
+.inputBoxInputDark{
+  background-color: #18184a;
+  color: white;
+}
+.inputBox2Dark{
+  background-color: #18184a;
+}
+.notesBgTxtDark{
+  color: white;
+}
+.notesBgImgDark{
+  filter: invert(60%);
+}
+.closebtnDark{
+  color: white !important;
+  font-weight: 500;
+}
+.cardDark{
+  background-color: #18184a !important;
+  color: white !important;
+  border: 1px solid #1b255d;
+}
+.cardImgDark{
+  filter: invert(1);
+}
+.aboutBoxDark{
+  background-color: #18184a;
+}
+.aboutBox2Dark{
+ color: white;
+}
+.navbar-toggler-icon-dark{
+  filter: invert(1) !important;
+}
+.navbar-toggler-dark{
+  border-color: white !important;
+  color: none !important;
+}
+.errorPageTxtDark{
+  color: white !important;
+}
+.errorPageBgDark{
+  filter: invert(60%);
+}
