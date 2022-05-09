@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import noteContext from '../context/notes/noteContext'
 
 const NoteItem = (props) => {
@@ -9,9 +9,28 @@ const NoteItem = (props) => {
 
     const { note,updatenote } = props
 
+    const [flag, setFlag] = useState(true);
+    useEffect(()=>{
+        if(localStorage.getItem('mode'))
+        {   
+            if(localStorage.getItem('mode')==='darkmode')
+            {
+                setFlag(false);
+            }
+            else
+            {
+                setFlag(true);
+            }
+        }
+        else
+        {
+            setFlag(true);
+        }
+    },[]);
+
     return (
         <>
-            <div className="card">
+            <div className={flag ? 'card' : 'card cardDark'}>
                 <div className="tick">
                     <img src="../images/check.svg" className="cardImg" alt="tick" />
                 </div>

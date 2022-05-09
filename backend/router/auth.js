@@ -80,7 +80,15 @@ let success=false;
     // Finds the validation errors in this request and wraps them in an object with handy functions
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      let tempArr=[];
+      // console.log(errors.array());
+      for(let i of errors.array())
+      {
+        console.log("yes");
+        tempArr.push(i.msg+", ");
+      }
+      console.log(tempArr.toString().slice(0,-2));
+      return res.status(400).json({message: tempArr.toString().slice(0,-2),type:"danger" });
     }
     const { email, password } = req.body;
 
