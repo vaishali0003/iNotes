@@ -55,7 +55,6 @@ const Contact = (props) => {
       if (json.success) {
         props.showAlert('Message sent successfully','success')
         setData({ ...data, message: "" })
-        console.log(data);
       } else {
         props.showAlert('Message not sent! PLease try again','danger')
         navigate('/')

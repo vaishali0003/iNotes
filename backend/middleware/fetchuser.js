@@ -1,25 +1,24 @@
-var jwt=require('jsonwebtoken');
-JWT_SECRET='vaishaliisaverygoodandsweettalentedgirl';
+var jwt = require('jsonwebtoken');
+JWT_SECRET = 'vaishaliisaverygoodandsweettalentedgirl';
 
+const fetchuser = (req, res, next) => {
 
-const fetchuser=(req,res,next)=>{
+    const token = req.header('auth-token');
 
-    const token=req.header('auth-token');
-
-    if(!token){
-        return res.status(401).send({error:"Please authenticate using a valid token"})
+    if (!token) {
+        return res.status(401).send({ error: "Please authenticate using a valid token" })
     }
 
-// there comes a possibility that token is not valid so keep it in try catch
+    // there comes a possibility that token is not valid so keep it in try catch
 
-try{
-const data=jwt.verify(token,JWT_SECRET);
-req.user=data.user;
-next();
-}
-catch(err){
-    return res.status(401).send({error:"Please authenticate using a valid token"})
-}
+    try {
+        const data = jwt.verify(token, JWT_SECRET);
+        req.user = data.user;
+        next();
+    }
+    catch (err) {
+        return res.status(401).send({ error: "Please authenticate using a valid token" })
+    }
 
 }
-module.exports=fetchuser;
+module.exports = fetchuser;
